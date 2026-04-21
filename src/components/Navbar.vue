@@ -2,7 +2,7 @@
   <header class="navbar">
     <div class="container nav-content">
       <div class="logo">
-        <img src="/logo.png" alt="Seedata Logo" class="logo-img" />
+        <img src="/logo-website.png" alt="Seedata Logo" class="logo-img" />
         <span class="logo-text">See<span class="text-gradient">data</span></span>
       </div>
       <nav class="nav-links">
