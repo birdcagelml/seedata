@@ -1,12 +1,16 @@
 <template>
   <section id="home" class="hero">
+    <!-- 视频背景 (动态绑定src可以跳过Vite在编译时的import检查) -->
+    <video class="hero-bg-video" :src="'/video/section1.mp4'" autoplay loop muted playsinline></video>
+    <div class="hero-overlay"></div>
+
     <div class="container hero-content">
       <h1 class="title">
-        重塑数据价值<br />
-        致力 <span class="text-gradient">效率优先</span> 的标注平台
+        种下数据，生长智能
       </h1>
       <p class="subtitle">
-        Seedata为您提供卓越的数据标注设施，涵括2D/3D点云、文本标注与具身智能视频标注，赋能AI前沿探索。
+        Seedata 智数起源 — 为AI产品提供高质量数据标注解决方案<br />
+        伟大的AI，始于一份精准的数据
       </p>
       <div class="hero-actions">
         <button class="glow-btn">免费开始</button>
@@ -29,6 +33,30 @@
   padding-top: var(--nav-height);
 }
 
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: scale(1.1); /* 整体放大10%，把右下角的水印挤出屏幕外 */
+  transform-origin: center center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 改为亮色玻璃质感遮罩，适配亮色科技风格 */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
 .hero-content {
   position: relative;
   z-index: 10;
@@ -41,11 +69,12 @@
   line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: -1px;
+  color: var(--color-bg-surface);
 }
 
 .subtitle {
   font-size: 20px;
-  color: var(--color-text-muted);
+  color: var(--color-bg-surface);
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -58,7 +87,7 @@
 
 .outline-btn {
   background: transparent;
-  color: var(--color-text-main);
+  color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 12px 28px;
@@ -77,26 +106,33 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  z-index: 1;
-  opacity: 0.3;
+  z-index: 2; /* 调高z-index，置于视频遮罩之上 */
+  opacity: 0.4;
+  animation: pulse-glow 8s infinite alternate ease-in-out;
 }
 
 .orb-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--color-primary);
+  width: 450px;
+  height: 450px;
+  background: #00ff88;
   top: 10%;
   left: -100px;
+  animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 300px;
-  height: 300px;
-  background: var(--color-secondary);
-  bottom: 10%;
+  width: 350px;
+  height: 350px;
+  background: #00f2fe;
+  bottom: 15%;
   right: -50px;
+  animation-delay: 4s;
 }
 
+@keyframes pulse-glow {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+  100% { transform: scale(1.1) translate(20px, -20px); opacity: 0.6; filter: blur(120px); }
+}
 @media (max-width: 768px) {
   .title { font-size: 42px; }
   .subtitle { font-size: 16px; }

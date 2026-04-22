@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-bottom">
         <div class="logo">
-          See<span class="text-gradient">data</span>
+          <img src="/logo-website.png" alt="Seedata Logo" class="logo-img" />
         </div>
         <p>&copy; 2026 Seedata Inc. 保留所有权利. 效率优先的标注基建平台。</p>
       </div>
@@ -25,8 +25,15 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-weight: 800;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
 }
 
 p {
