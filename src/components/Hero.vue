@@ -1,21 +1,19 @@
 <template>
   <section id="home" class="hero">
     <!-- 视频背景 (动态绑定src可以跳过Vite在编译时的import检查) -->
-    <video class="hero-bg-video" :src="'/video/section1.mp4'" autoplay loop muted playsinline></video>
+    <video class="hero-bg-video" :src="'/video/section1.mp4'" poster="/video/poster_section1.jpg" autoplay loop muted playsinline></video>
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
+      <div class="subtitle-badge">Seedata 智数起源</div>
       <h1 class="title">
-        种下数据，生长智能
+        种下数据，长出智能
       </h1>
+      <div class="title-divider"></div>
       <p class="subtitle">
-        Seedata 智数起源 — 为AI产品提供高质量数据标注解决方案<br />
+        为AI产品提供高质量数据标注解决方案<br />
         伟大的AI，始于一份精准的数据
       </p>
-      <div class="hero-actions">
-        <button class="glow-btn">免费开始</button>
-        <button class="outline-btn">了解更多</button>
-      </div>
     </div>
     <!-- 装饰球 -->
     <div class="glow-orb orb-1"></div>
@@ -25,7 +23,7 @@
 
 <style scoped>
 .hero {
-  min-height: 100vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -60,8 +58,28 @@
 .hero-content {
   position: relative;
   z-index: 10;
-  text-align: center;
+  text-align: left;
   max-width: 800px;
+}
+
+.subtitle-badge {
+  display: inline-block;
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.title-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00f2fe, #0055ff);
+  border-radius: 2px;
+  margin-bottom: 24px;
 }
 
 .title {
@@ -76,30 +94,8 @@
   font-size: 20px;
   color: var(--color-bg-surface);
   line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.outline-btn {
-  background: transparent;
-  color: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.outline-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
 .glow-orb {
