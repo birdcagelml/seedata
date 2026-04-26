@@ -11,7 +11,7 @@
             <p>支持图像、文本、音频、视频多模态标注<br/>行业平均准确率高达99.3%</p>
           </div>
           <div class="row-media">
-            <video src="/video/1.mp4" poster="/video/poster_1.jpg" autoplay loop muted playsinline></video>
+            <video src="/video/1.mp4" poster="/video/poster_1.png" autoplay loop muted playsinline></video>
           </div>
         </div>
         <div class="service-row reverse">
@@ -20,7 +20,7 @@
             <p>智能辅助标注工具 + 专业标注团队<br/>交付周期缩短60%</p>
           </div>
           <div class="row-media">
-            <video src="/video/2.mp4" poster="/video/poster_2.jpg" autoplay loop muted playsinline></video>
+            <video src="/video/2.mp4" poster="/video/poster_2.png" autoplay loop muted playsinline></video>
           </div>
         </div>
         <div class="service-row">
