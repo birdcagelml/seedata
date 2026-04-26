@@ -11,8 +11,7 @@
       </h1>
       <div class="title-divider"></div>
       <p class="subtitle">
-        为AI产品提供高质量数据标注解决方案<br />
-        伟大的AI，始于一份精准的数据
+        科技驱动的高质量 AI 数据与标注服务商
       </p>
     </div>
     <!-- 装饰球 -->
@@ -63,15 +62,30 @@
 }
 
 .subtitle-badge {
+  position: relative;
   display: inline-block;
-  background: rgba(0, 242, 254, 0.1);
+  padding: 8px 20px;
   color: #00f2fe;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  padding: 6px 16px;
-  border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
+  background: rgba(0, 242, 254, 0.05);
+  border: 1px dashed rgba(0, 242, 254, 0.6);
+}
+
+.subtitle-badge::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  pointer-events: none;
+  background: 
+    linear-gradient(#00f2fe, #00f2fe) top left / 6px 6px no-repeat,
+    linear-gradient(#00f2fe, #00f2fe) top right / 6px 6px no-repeat,
+    linear-gradient(#00f2fe, #00f2fe) bottom left / 6px 6px no-repeat,
+    linear-gradient(#00f2fe, #00f2fe) bottom right / 6px 6px no-repeat;
 }
 
 .title-divider {
