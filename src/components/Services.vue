@@ -25,11 +25,16 @@
         </div>
         <div class="service-row">
           <div class="row-content">
-            <h3>数据安全</h3>
-            <p>ISO 27001认证，私有化部署可选<br/>全链路数据加密保护</p>
+            <h3>数据安全，架构先行</h3>
+            <p class="subtitle">--为数据提供全生命周期的安全防护。</p>
+            <ul class="feature-list">
+              <li><span>1、</span>支持完全私有化部署</li>
+              <li><span>2、</span>动态防泄密技术，全层级指纹留证</li>
+              <li><span>3、</span>高防数据专线，物理级链路保障，确保数据传输无忧</li>
+            </ul>
           </div>
           <div class="row-media">
-            <video src="/video/3.mp4" poster="/video/poster_3.jpg" autoplay loop muted playsinline></video>
+            <img src="/SECURITY.png" alt="数据安全" />
           </div>
         </div>
         <div class="service-row reverse">
@@ -114,6 +119,33 @@
   line-height: 1.8;
   font-size: 18px;
 }
+.row-content p.subtitle {
+  margin-top: -12px;
+  margin-bottom: 24px;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.feature-list li {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+.feature-list li span {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
 .row-media {
   flex: 1.2;
   border-radius: 20px;
@@ -131,14 +163,16 @@
   box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.2);
   pointer-events: none;
 }
-.row-media video {
+.row-media video,
+.row-media img {
   width: 100%;
   display: block;
   object-fit: cover;
   opacity: 0.9;
   transition: opacity 0.5s ease, transform 0.8s ease;
 }
-.service-row:hover .row-media video {
+.service-row:hover .row-media video,
+.service-row:hover .row-media img {
   opacity: 1;
   transform: scale(1.02);
 }

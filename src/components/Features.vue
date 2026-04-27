@@ -30,10 +30,22 @@
             <button class="glow-btn small-btn">进入控制台</button>
           </div>
           <div class="product-media-large">
-            <div class="media-placeholder">
-              <svg class="placeholder-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              <span class="placeholder-text">平台演示界面 / 数据可视化视频 占位<br/>(等待素材更新)</span>
+            <div class="screen-frame">
+              <div class="screen-bar">
+                <div class="screen-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="screen-title-bar">ZhiBiao Platform</div>
+              </div>
+              <div class="screen-body">
+                <img src="/zhibiao.png" alt="智标平台演示界面" class="product-img" />
+                <div class="scan-line"></div>
+              </div>
             </div>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
           </div>
         </div>
 
@@ -59,11 +71,23 @@
             </ul>
             <button class="glow-btn small-btn outline-mode">了解系统详情</button>
           </div>
-          <div class="product-media-large">
-            <div class="media-placeholder alt-bg">
-              <svg class="placeholder-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-              <span class="placeholder-text">公会管理数据大屏 / 任务调度后台 占位<br/>(等待素材更新)</span>
+          <div class="product-media-large alt">
+            <div class="screen-frame">
+              <div class="screen-bar">
+                <div class="screen-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="screen-title-bar">Synergy Hub</div>
+              </div>
+              <div class="screen-body">
+                <img src="/juhe.png" alt="聚合管理平台演示界面" class="product-img" />
+                <div class="scan-line"></div>
+              </div>
             </div>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
           </div>
         </div>
       </div>
@@ -216,13 +240,135 @@
 .outline-mode::before { display: none; }
 .outline-mode:hover { background: rgba(0, 85, 255, 0.05); }
 
+/* ===== 产品媒体区域 ===== */
 .product-media-large {
   flex: 1.4;
-  height: 480px;
-  border-radius: 24px;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.04) 0%, rgba(0, 85, 255, 0.06) 100%);
+  border: 1.5px dashed rgba(0, 242, 254, 0.3);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-media-large.alt {
+  background: linear-gradient(135deg, rgba(0, 85, 255, 0.06) 0%, rgba(0, 242, 254, 0.04) 100%);
+  border-color: rgba(0, 85, 255, 0.3);
+}
+
+.product-row:hover .product-media-large {
+  border-color: rgba(0, 242, 254, 0.65);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 242, 254, 0.08) inset;
+}
+
+.product-row:hover .product-media-large.alt {
+  border-color: rgba(0, 85, 255, 0.65);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 85, 255, 0.08) inset;
+}
+
+/* 四角装饰 */
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+  opacity: 0.5;
+}
+
+.product-row:hover .corner { opacity: 1; }
+
+.corner.tl { top: 8px; left: 8px; border-top: 2px solid var(--color-secondary); border-left: 2px solid var(--color-secondary); border-radius: 4px 0 0 0; }
+.corner.tr { top: 8px; right: 8px; border-top: 2px solid var(--color-secondary); border-right: 2px solid var(--color-secondary); border-radius: 0 4px 0 0; }
+.corner.bl { bottom: 8px; left: 8px; border-bottom: 2px solid var(--color-secondary); border-left: 2px solid var(--color-secondary); border-radius: 0 0 0 4px; }
+.corner.br { bottom: 8px; right: 8px; border-bottom: 2px solid var(--color-secondary); border-right: 2px solid var(--color-secondary); border-radius: 0 0 4px 0; }
+
+.product-media-large.alt .corner.tl,
+.product-media-large.alt .corner.tr,
+.product-media-large.alt .corner.bl,
+.product-media-large.alt .corner.br {
+  border-color: var(--color-primary);
+}
+
+/* 模拟屏幕镜框 */
+.screen-frame {
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-  background: var(--color-bg-dark);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.screen-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(20, 20, 30, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.screen-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.screen-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.screen-dots span:nth-child(1) { background: #ff5f57; }
+.screen-dots span:nth-child(2) { background: #ffbd2e; }
+.screen-dots span:nth-child(3) { background: #28ca41; }
+
+.screen-title-bar {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+  font-family: monospace;
+}
+
+.screen-body {
+  position: relative;
+  overflow: hidden;
+  background: #0d0f1a;
+  line-height: 0;
+}
+
+/* 扫光动画 */
+.scan-line {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 242, 254, 0.04) 50%, transparent 100%);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+}
+
+.product-media-large.alt .scan-line {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 85, 255, 0.04) 50%, transparent 100%);
+}
+
+@keyframes scan {
+  0%   { top: -40%; }
+  100% { top: 110%; }
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.product-row:hover .product-img {
+  transform: scale(1.03);
 }
 
 .media-placeholder {
