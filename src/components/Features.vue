@@ -69,7 +69,7 @@
               <li><span class="hl-dot"></span> 实时数据看板，精准统计结算成员工时与绩效</li>
               <li><span class="hl-dot"></span> 上下游任务一键智能分发与数据资产沉淀</li>
             </ul>
-            <button class="glow-btn small-btn outline-mode">了解系统详情</button>
+            <!-- <button class="glow-btn small-btn outline-mode">了解系统详情</button> -->
           </div>
           <div class="product-media-large alt">
             <div class="screen-frame">
