@@ -103,11 +103,13 @@
   margin-bottom: 24px;
   letter-spacing: -1px;
   color: var(--color-bg-surface);
+  -webkit-text-fill-color: currentcolor;
 }
 
 .subtitle-en {
   font-size: 22px;
   color: var(--color-bg-surface);
+  -webkit-text-fill-color: currentcolor;
   margin-top: -16px;
   margin-bottom: 24px;
   opacity: 0.75;
@@ -118,6 +120,7 @@
 .subtitle {
   font-size: 20px;
   color: var(--color-bg-surface);
+  -webkit-text-fill-color: currentcolor;
   line-height: 1.6;
   margin-bottom: 20px;
   opacity: 0.9;

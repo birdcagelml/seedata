@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 .glow-btn {
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   color: #fff;
+  -webkit-text-fill-color: currentcolor;
   border: none;
   border-radius: 8px;
   padding: 12px 28px;

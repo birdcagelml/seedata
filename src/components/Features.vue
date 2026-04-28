@@ -176,6 +176,7 @@
 .tag {
   background: var(--color-primary);
   color: #fff;
+  -webkit-text-fill-color: currentcolor;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 14px;
