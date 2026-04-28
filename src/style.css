@@ -1,6 +1,6 @@
 /* Updated commit description: 新的文案描述已提交 */
 :root {
-  color-scheme: light;
+  color-scheme: only light;
   /* Seedata Colors - Bright Tech Style */
   --color-bg-dark: #F0F4F8; /* Bright UI background */
   --color-bg-surface: #FFFFFF; /* Clean card surface */
