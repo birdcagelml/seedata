@@ -1,3 +1,5 @@
+<script setup>
+</script>
 <template>
   <section id="services" class="services">
     <div class="container">
@@ -26,11 +28,11 @@
         <div class="service-row">
           <div class="row-content">
             <h3>数据安全，架构先行</h3>
-            <p class="subtitle">--为数据提供全生命周期的安全防护。</p>
+            <!-- <p class="subtitle">--为数据提供全生命周期的安全防护。</p> -->
             <ul class="feature-list">
-              <li><span>1、</span>支持完全私有化部署</li>
-              <li><span>2、</span>动态防泄密技术，全层级指纹留证</li>
-              <li><span>3、</span>高防数据专线，物理级链路保障，确保数据传输无忧</li>
+              <li><span class="hl-dot"></span>支持完全私有化部署</li>
+              <li><span class="hl-dot"></span>动态防泄密技术，全层级指纹留证</li>
+              <li><span class="hl-dot"></span>高防数据专线，物理级链路保障，确保数据传输无忧</li>
             </ul>
           </div>
           <div class="row-media">
@@ -138,12 +140,16 @@
   line-height: 1.6;
   margin-bottom: 12px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
-.feature-list li span {
-  color: var(--color-primary);
-  font-weight: bold;
-  margin-right: 8px;
+.hl-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-secondary);
+  margin-right: 12px;
   flex-shrink: 0;
 }
 .row-media {

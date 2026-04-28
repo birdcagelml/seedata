@@ -5,10 +5,11 @@
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
-      <div class="subtitle-badge">Seedata 智数起源</div>
+      <!-- <div class="subtitle-badge">Seedata 智数起源</div> -->
       <h1 class="title">
         种下数据，长出智能
       </h1>
+      <p class="subtitle-en">Seed the data, Grow the intelligence</p>
       <div class="title-divider"></div>
       <p class="subtitle">
         科技驱动的高质量 AI 数据与标注服务商
@@ -104,6 +105,16 @@
   color: var(--color-bg-surface);
 }
 
+.subtitle-en {
+  font-size: 22px;
+  color: var(--color-bg-surface);
+  margin-top: -16px;
+  margin-bottom: 24px;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
 .subtitle {
   font-size: 20px;
   color: var(--color-bg-surface);
@@ -145,6 +156,7 @@
 }
 @media (max-width: 768px) {
   .title { font-size: 42px; }
+  .subtitle-en { font-size: 18px; margin-top: -12px; }
   .subtitle { font-size: 16px; }
 }
 </style>
