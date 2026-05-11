@@ -7,7 +7,7 @@
     <div class="container hero-content">
       <!-- <div class="subtitle-badge">Seedata 智数起源</div> -->
       <h1 class="title">
-        种下数据，长出智能
+        种下数据，生长智能
       </h1>
       <p class="subtitle-en">Seed the data, Grow the intelligence</p>
       <div class="title-divider"></div>
